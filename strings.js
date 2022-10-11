@@ -35,3 +35,31 @@ console.log("Pizza is here!".indexOf("here")); // -> 9
 console.log("Hello" + " " + "Eugene"); // adding an empty string creates a space between the two strings
 console.log("App"+'Academy'); // -> AppAcademy
 console.log("Welcome" + " back!"); // Welcome back!
+
+
+// Escaping Strings
+// To use quotes within a string, I can use the method of escaping strings using a Backlash "\". 
+// The backlash tells JavaScript to ignore the character's special meaning and use the literal value of the character. 
+console.log("I said to myself \"I will finish this course soon.\"") // -> I said to myself "I will finish this course soon."
+// Code	Character
+// \\	    \(backslash)
+// \"	    ""(double quote)
+// \'	    '(single quote)
+// \n	    newline
+// \t	    tab
+
+
+// Comparing Strings
+var upper = "Yes";
+var lower =  "yes";
+console.log(upper == lower); // -> False. The two strings are different in terms of case sensitivity.
+// More examples
+console.log("green" == "blue") // -> False
+console.log("green" > "blue") // -> True. The ASCII values of characters in "green" are greater than for "blue".
+console.log("green" > "green") // -> False
+console.log("green" > "Green") // -> True
+console.log("green" == "Green") // -> False
+
+// Example
+var food = "Pizza";
+console.log(food)
