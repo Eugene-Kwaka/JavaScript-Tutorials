@@ -63,3 +63,18 @@ console.log("green" == "Green") // -> False
 // Example
 var food = "Pizza";
 console.log(food)
+
+
+// USINGS VARIABLE WITHIN A STRING AND CONCANTENATION 
+var adjective1 = "amazing";
+var adjective2 = "fun";
+var adjective3 = "entertaining";
+var madLib = "The Intro to JavaScript course is " + adjective1 +"." + " James and Julia are so " + adjective2 +"." + " I cannot wait to work through the rest of this " + adjective3 + " content!"
+console.log(madLib);
+
+// Example 2
+var firstName = "Eugene";
+var interest = "food";
+var hobby = "video games";
+var awesomeMessage = "Hi, my name is " + firstName + "." + " I love " + interest + "." + " In my spare time, I like to play " + hobby + ".";
+console.log(awesomeMessage);
