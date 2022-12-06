@@ -5,7 +5,7 @@ var car = {
     brand: 'tesla'
 }
 console.log(car)
-// console.log(car.brand) // display a single property of the object
+console.log(car.brand) // display a single property of the object
 
 // Creating an object using dot notation
 var house = {};
@@ -35,3 +35,16 @@ console.log(clothes)
 // pop() removes the last item from the array
 clothes.pop(); // removed "pants" from the array
 console.log(clothes)
+
+
+// Object Methods
+var electronics = {};
+electronics.switch = function(){
+    console.log("Turned on or off")
+}
+electronics.price = function(){
+    console.log(500)
+}
+console.log(electronics)
+electronics.switch() // -> this object method will only be called by the electronics object and we add () to the property key to invoke the function
+electronics.price()
