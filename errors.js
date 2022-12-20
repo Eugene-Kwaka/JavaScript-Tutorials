@@ -1,14 +1,28 @@
-// I use try and catch to avoid errors and exceptions thrown when running code..
-function sum(a, b){
-    var c  = a + b;
-    try{
-       console.log(a+b+d);
-    } catch (err) {
-        console.log(err)
-     }
-}
-
-sum(9,10)
-
 // This will manually create the TypeError instance
-throw new TypeError();
+// throw new TypeError();
+
+
+
+// Code a function declaration called addTwoSums and takes arguments (a,b)
+// Invoke the addTwoNums function with a number and a string
+// Update the addTwoNums function with a try...catch block
+// If the passed-in arguments are not numbers, throw an error
+// Update the catch block
+// Invoke the addTwoNums function and Add another console log under the addTwoNums function invocation
+function addTwoSums(a, b){
+   try{
+      if (typeof(a) !== 'number'){
+         throw ReferenceError('the first argument is not a number')
+      } else if (typeof(b) !== 'number') {
+         throw ReferenceError('the second argument is not a number')
+      } else {
+         console.log(a+b)
+      }
+   } catch (err){
+      console.log("Error!", err)
+   }
+}
+   
+addTwoSums(8, "10");
+
+console.log("It still works")
