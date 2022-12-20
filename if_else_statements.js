@@ -1,40 +1,40 @@
-// // IF ELSE Statement
-// var result = 50;
-// if (result > 40){
-//     console.log("You passed the test, Congratulations!!");
-// } else {
-//     console.log("You failed the test, you have to retake the test!!");
-// }
+// IF ELSE Statement
+var result = 50;
+if (result > 40){
+    console.log("You passed the test, Congratulations!!");
+} else {
+    console.log("You failed the test, you have to retake the test!!");
+}
 
 
-// // ELSE IF Statement
-// var food = "pizza";
+// ELSE IF Statement
+var food = "pizza";
 
-// if (food == "pizza") {
-//     console.log("Buy the food!");
-// } else if (food == "burger") {
-//     console.log("Reconsider!");
-// }   else if (food == "Rolls") {
-//     console.log("Return it!");
-// }
+if (food == "pizza") {
+    console.log("Buy the food!");
+} else if (food == "burger") {
+    console.log("Reconsider!");
+}   else if (food == "Rolls") {
+    console.log("Return it!");
+}
 
-// // We can use the Switch statement to reduce the lines of code and complexity of using the Else If Statement.
+// We can use the Switch statement to reduce the lines of code and complexity of using the Else If Statement.
 
-// var food = "Cereals";
-// switch (food) {
-//     case "Cereals":
-//         console.log("I love fruity pebbles!");
-//         break;
-//     case "Rolls":
-//         console.log("I don't want rolls today!");
-//         break;
-//     case "Mahamri":
-//         console.log("I'll definitely have mahamri!");
-//         break;
-//     default:
-//         console.log("I'll try another store!");
+var food = "Cereals";
+switch (food) {
+    case "Cereals":
+        console.log("I love fruity pebbles!");
+        break;
+    case "Rolls":
+        console.log("I don't want rolls today!");
+        break;
+    case "Mahamri":
+        console.log("I'll definitely have mahamri!");
+        break;
+    default:
+        console.log("I'll try another store!");
 
-// }
+}
 
 
 
