@@ -1,5 +1,5 @@
 // This will manually create the TypeError instance
-// throw new TypeError();
+throw new TypeError();
 
 
 
@@ -26,3 +26,8 @@ function addTwoSums(a, b){
 addTwoSums(8, "10");
 
 console.log("It still works")
+
+
+// In this case nothing will get printed as the console.log() function is unreachable
+throw new Error();
+console.log("Hello");
