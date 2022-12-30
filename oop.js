@@ -57,9 +57,72 @@ console.log(car1.model)
 
 // Here is how inheritance works in JS
 class Animal { /* ...class code here... */ }
-class Bird extends Animal { /* ...class code here... */ }
-class Eagle extends Bird { /* ...class code here... */ }
+class Mammal extends Animal { /* ...class code here... */ }
+class Cow extends Mammal { /* ...class code here... */ }
 
 
 // 2. Encapsulation
 // encapsulation has to do with making a code implementation "hidden" from other users, in the sense that they don't have to know how my code works in order to "consume" the code.
+// For example the code:
+"eat".toUpperCase();
+// I don't need to know the behind the scenes for the method but I should know how to use it and make sure my code does not break.
+
+
+// 3. Abstraction
+// Abstraction is all about writing code in a way that will make it more generalized.
+// An abstraction is about extracting the concept of what you're trying to do, rather than dealing with a specific manifestation of that concept. 
+
+
+// 4. Polymorphism
+// This means taking of many shapes. 
+// For example: A door (object) has a property method called bell that is rung for a person to come and open the door.
+// At the same time, a bicycle (object) has a property method named bell that is also rung, but in this case it is to alert people to get out of the way. 
+// To put this in code:
+const door = {
+    bell: function(){
+        return "Ring, ring! Come open the door"
+    }
+}
+
+const bicycle = {
+    bell: function(){
+        return "Ring, ring! Get out of the way"
+    }
+}
+// door.bell()
+// bicycle.bell()
+
+// I can create a polymorph method that can work with both objects, or new object with the bell method.
+// It takes in the objects(thing) as a parameter and returns the thing.bell() method as an output
+function ringBell(thing){
+    console.log(thing.bell())
+}
+// Calling the function ringBell will display the value of the object's bell() method.
+ringBell(door)
+ringBell(bicycle)
+
+// Let me try the above on classes
+class Bird {
+    useWings(){
+        console.log("Flying");
+    }
+}
+
+class Hawk extends Bird {
+    useWings(){
+        super.useWings() // Hawk sub-class will inherit the useWings from the Bird class using super
+        console.log("Let's go Hawks")
+    }
+}
+
+class Penguin extends Bird {
+    useWings() {
+        console.log("Come on Boys")
+    }
+}
+
+var blackPenguin = new Penguin()
+blackPenguin.useWings();
+
+var hawkEye = new Hawk()
+hawkEye.useWings();
