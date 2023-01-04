@@ -27,7 +27,7 @@ class noDefaultParams{
     calculate(){
         if (this.bool1){
             console.log(this.string1, this.num1 + this.num2 + this.num3);
-        } else{
+        } else {
             console.log("The value of bool1 is incorrect");
         }
         
