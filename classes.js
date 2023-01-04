@@ -1,18 +1,18 @@
-// // Create a class
-// class Train {
-//     // Constructor is responsible to build the properties that the object instances will have
-//     constructor(color, lightsOn){
-//         // "this" is the future object instance of the Train class
-//         this.color = color;
-//         this.lightsOn = lightsOn;
-//     }
-// }
+// Create a class
+class Train {
+    // Constructor is responsible to build the properties that the object instances will have
+    constructor(color, lightsOn){
+        // "this" is the future object instance of the Train class
+        this.color = color;
+        this.lightsOn = lightsOn;
+    }
+}
 
-// let speedRail = new Train("yellow", true)
-// console.log(speedRail)
+let speedRail = new Train("yellow", true)
+console.log(speedRail)
 
-// let commuterRail = new Train("red", false)
-// console.log(commuterRail)
+let commuterRail = new Train("red", false)
+console.log(commuterRail)
 
 // ADDING METHODS TO CLASSES
 class Train{
@@ -39,11 +39,11 @@ class Train{
     }
 }
 var fastRail = new Train("amber", true);
-// // invoking this function will affect the lightsStatus() value because its intended to change the value from either true to false or viceversa
-// fastRail.toggleLights()
-// fastRail.lightsStatus() // -> this will print out false because of the toggleLights() method being invoked before it
-// fastRail.getSelf() // -> This will ONLY display the object instance properties defined in the constructor.
-// fastRail.getPrototype() // -> ONLY displays the Train class and the class methods, NOT the data from the constructors
+// invoking this function will affect the lightsStatus() value because its intended to change the value from either true to false or viceversa
+fastRail.toggleLights()
+fastRail.lightsStatus() // -> this will print out false because of the toggleLights() method being invoked before it
+fastRail.getSelf() // -> This will ONLY display the object instance properties defined in the constructor.
+fastRail.getPrototype() // -> ONLY displays the Train class and the class methods, NOT the data from the constructors
 
 /* It is possible to implement Polymorphism using classes in JS. 
  This is achieved by inheriting from the base class (Train) then overriding the inherited behaviors. */
