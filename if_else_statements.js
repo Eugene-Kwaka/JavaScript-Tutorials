@@ -1,5 +1,5 @@
 // IF ELSE Statement
-var result = 50;
+let result = 50;
 if (result > 40){
     console.log("You passed the test, Congratulations!!");
 } else {
@@ -7,20 +7,20 @@ if (result > 40){
 }
 
 
-// ELSE IF Statement
-var food = "pizza";
+// IF ELSE Statement
+let fastFood = "pizza";
 
-if (food == "pizza") {
-    console.log("Buy the food!");
-} else if (food == "burger") {
+if (fastFood == "pizza") {
+    console.log("Buy the fastFood!");
+} else if (fastFood == "burger") {
     console.log("Reconsider!");
-}   else if (food == "Rolls") {
+}   else if (fastFood == "Rolls") {
     console.log("Return it!");
 }
 
 // We can use the Switch statement to reduce the lines of code and complexity of using the Else If Statement.
 
-var food = "Cereals";
+let food = "Cereals";
 switch (food) {
     case "Cereals":
         console.log("I love fruity pebbles!");
@@ -49,7 +49,7 @@ switch (food) {
 
 // Add an "else" statement to capture any other value. Inside the block, type "console.log" and then "The value of the age variable is not numerical". 
 
-var age = 27;
+let age = 27;
 if (age >= 65) {
     console.log("You get your income from your pension");
 } else if (age < 65 && age >= 18) {
@@ -61,7 +61,7 @@ if (age >= 65) {
 }
 
 // Code the days of the week program as a switch statement
-// On the next line, define a new variable, name it day, and set its value to "Sunday".
+// On the next line, define a new letiable, name it day, and set its value to "Sunday".
 
 // Start coding a switch statement, passing the day variable as the expression to evaluate.
 
@@ -71,7 +71,7 @@ if (age >= 65) {
 
 // Finally, update the console.log calls for each case, based on whatever activity you have on each of the days.
 
-var day = "Sunday";
+let day = "Sunday";
 switch (day) {
     case "Monday":
         console.log("Do something");

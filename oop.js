@@ -110,12 +110,13 @@ class Bird {
 
 class Hawk extends Bird {
     useWings(){
-        super.useWings() // Hawk sub-class will inherit the useWings from the Bird class using super
+        super.useWings() // Hawk sub-class will inherit the useWings from the Bird class using "super"
         console.log("Let's go Hawks")
     }
 }
 
 class Penguin extends Bird {
+    // Penguin does not inherit the useWings() method from bird
     useWings() {
         console.log("Come on Boys")
     }

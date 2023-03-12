@@ -1,5 +1,5 @@
 // Display two consecutive years and their summer months
-for (var year = 2022; year <2025; year++) {
+for (var year = 2022; year < 2025; year++) {
     console.log(year)
     for (var month = 6; month < 9; month++) {
         console.log("The summer months are " + month)
@@ -89,4 +89,20 @@ for (var i = 1; i <= 10; i++){
         default:
             console.log(i)
     }
+}
+
+for (let num = 1; num <= 10; num++){
+	switch (num) {
+		case 1:
+			console.log("Gold");
+            break;
+		case 2:
+			console.log("Silver");
+            break;
+		case 3: 
+			console.log("Bronze");
+            break;
+		default:
+			console.log(num);
+	}
 }

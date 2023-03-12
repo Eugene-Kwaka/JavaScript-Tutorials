@@ -40,7 +40,7 @@ class Train{
 }
 var fastRail = new Train("amber", true);
 // invoking this function will affect the lightsStatus() value because its intended to change the value from either true to false or viceversa
-fastRail.toggleLights()
+fastRail.toggleLights() // -> This will make the fastRail lighsStatus() to be false
 fastRail.lightsStatus() // -> this will print out false because of the toggleLights() method being invoked before it
 fastRail.getSelf() // -> This will ONLY display the object instance properties defined in the constructor.
 fastRail.getPrototype() // -> ONLY displays the Train class and the class methods, NOT the data from the constructors
@@ -57,8 +57,8 @@ class HighSpeedTrain extends Train {
         this.highSpeedOn = highSpeedOn;
     }
     toggleHighSpeedOn(){
-        this.highSpeedOn != this.highSpeedOn;
-        console.log("High speed status:", this.highSpeedOn)
+        this.highSpeedOn != this.highSpeedOn; //-> This becomes overrode by the console.log statement below
+        // console.log("High speed status:", this.highSpeedOn)
     }
     toggleLights(){
         super.toggleLights(); //-> Inherited from Train class but then overrode by the console.log statement below
@@ -69,8 +69,8 @@ class HighSpeedTrain extends Train {
 
 let bulletTrain = new HighSpeedTrain(400, true, "magenta", false)
 bulletTrain.toggleLights() // -> Will be true because the value is inherited from the super class
-bulletTrain.toggleHighSpeedOn() //-> returns True
-console.log(bulletTrain.highSpeedOn)
+bulletTrain.toggleHighSpeedOn() //-> returns False
+console.log(bulletTrain.highSpeedOn) // -> return True 
 
 let bulletRail = new Train('blue', false)
 bulletRail.toggleLights() // -> returns undefined

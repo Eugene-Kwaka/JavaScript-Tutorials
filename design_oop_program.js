@@ -8,7 +8,7 @@ Specifically, I'm preparing to build the following inheritance hierarchy:
              /     \          \          
         HouseCat   Tiger      Parrot
 
-    I will default parameters when writing the classes 
+    I will use default parameters when writing the classes 
 */
 
 class Animal {
@@ -20,7 +20,7 @@ class Animal {
     isActive(){
         // when the method is ran, the value of energy will lower until it hits zero, in this case it lowers by 20 when ran
         if (this.energy > 0){
-            this.energy -=20
+            this.energy -=20 // -> Energy levels is reduced by 20
             console.log("The energy is decreasing, currently at: ", this.energy)
         // If energy reaches 0, the sleep() method is invoked
         } else if (this.energy == 0){
@@ -30,7 +30,7 @@ class Animal {
     // After energy reaches 0, aleep() function is invoked where we increase energy by 20
     sleep(){
         this.energy += 20
-        console.log("Energy is increasing, currently at:", this.energy)
+        console.log("Energy is increasing, currently at: ", this.energy)
     }
     // Displays the color of the Animal instance
     getcolor(){
@@ -68,8 +68,8 @@ class HouseCat extends Cat {
     // The HouseCat inherits the makeSound() method but can override it if an option argument set is True.
     makeSound(option){
         // when makeSound() is invoked and the option argument is True, then it will run the inherited super.makeSound() from Cat class.
-        if (option){
-            super.makeSound()
+        if (option){ // -> If option is True 
+            super.makeSound() // this returns the "meow" as it is inherited from Cat
         // Otherwise it will make its own houseCatSound 
         } else {
             console.log("The houseCat sounds like:", this.houseCatSound)
@@ -122,7 +122,7 @@ class Parrot extends Bird {
     }
     // This makeSound method takes two conditionals.
     makeSound(option){
-        // to check if the option argument is true, then the parrot will make the "chirp" sound
+        // to check if the option argument is true, then the parrot will make the "chirp" sound as it inherits it from the Bird class
         if (option){
             super.makeSound()
         }
