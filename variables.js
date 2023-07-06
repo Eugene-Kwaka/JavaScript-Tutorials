@@ -46,6 +46,9 @@ let x = 7;
 x *= 3;
 console.log(x); // x -> 21
 
+let age = 26;
+if ()
+
 
 // VAR KEYWORD
 // We can declare and redelare var variables without errors
