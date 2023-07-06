@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validateForm(){
+            //This searches for the form "myForm" in the DOM
+            let x = document.forms["myForm"]["fname"].value;
+            //Checks if the "fname" input is not filled out
+            if (x == ""){
+                // displays an alert
+                alert("Name must be filled out")
+                // Returns false
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <form action="/" name="myForm" onsubmit="validateForm()" method="post">
+            <label for="name">First Name</label>
+            <input type="text" name="fname">
+            <br>
+            <input type="submit" value="submit">
+        </form>
+    </div>
+    <div class="container">
+        <p id="p">This text turns color</p>
+        <button type="button" onclick="document.getElementById('p').style.color = 'red'">Click Me</button>
+    </div>
+</body>
+</html>

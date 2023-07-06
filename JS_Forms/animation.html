@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Example</title>
+    <style>
+        #container{
+            width: 400px;
+            height: 400px;
+            position: relative;
+            background: yellow;
+        }
+        #animate{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>My First ever animation</h1>
+    <div>
+        <button onclick="return myMove()">Click me </button>
+    </div>
+    <br>
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+
+    <script>
+        // declare the JS function
+        function myMove(){
+            // id variable will be null(doesn't contain anything). It will store the ID of the interval timer
+            let id = null;
+            // Find the animate HTML element with the id of 'animate'
+            const e = document.getElementById('animate');
+            // This is the current position of the animate object which is 0 initially.
+            let pos = 0;
+            // This clears any existing interval timer placed before. It takes the interval id as its argument
+            clearInterval(id);
+            // setInterval sets a new timer. It calls the frame function every 5 ms.
+            id = setInterval(frame, 5);
+            // The frame function will be repeatedly called by the interval timer we set to 5ms
+            function frame(){
+                // if the animate object's position is 350
+                if (pos == 350){
+                    // we clear the timer, which means the animate object has to stop
+                    clearInterval(id);
+                }else{ // otherwise
+                    // Increment the position by 1
+                    pos++;
+                    // this line moves the animate object upwards by setting the CSS property 'top' to the current position value
+                    e.style.top = pos + 'px';
+                    // this line moves the animate object to the horizontally by setting the CSS property 'left' to the current position value
+                    e.style.left = pos + 'px';
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
